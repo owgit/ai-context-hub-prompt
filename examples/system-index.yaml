@@ -1,0 +1,67 @@
+projects:
+  - id: frontend-app
+    name: Frontend App
+    role: Public website and user-facing app
+    local_path: /Users/example/Sites/frontend-app
+    local_urls:
+      - http://localhost:3000
+    prod_urls:
+      - https://example.com
+    stack:
+      - Next.js
+      - Vercel
+      - Supabase
+    depends_on:
+      - cms
+      - database
+    used_by:
+      - end-users
+    external_dependencies:
+      - Vercel
+      - Supabase
+      - CMS
+    key_docs:
+      - README.md
+      - AGENTS.md
+    env_sources:
+      - .env.local
+      - Vercel project env
+    secret_refs:
+      - NEXT_PUBLIC_SUPABASE_URL
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY
+    known_flows:
+      - CMS content -> Frontend render
+      - Database reads -> Frontend UI
+
+  - id: crm-system
+    name: CRM System
+    role: Operational source of truth for customers and workflows
+    local_path: /Users/example/Sites/crm-system
+    local_urls:
+      - https://crm.local:4443
+    prod_urls:
+      - https://crm.example.com
+    stack:
+      - CRM platform
+      - PHP
+      - MySQL
+    depends_on:
+      - smtp
+    used_by:
+      - automation-worker
+      - mail-automation
+    external_dependencies:
+      - SMTP
+    key_docs:
+      - README.md
+      - docs/integrations.md
+    env_sources:
+      - .env
+      - shell profile
+    secret_refs:
+      - CRM_API_KEY
+      - SMTP_PASSWORD
+    known_flows:
+      - Lead state -> automation trigger
+      - CRM ticket -> mail automation
+
