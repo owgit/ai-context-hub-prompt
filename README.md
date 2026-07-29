@@ -88,7 +88,7 @@ It is especially useful for:
 ## How To Use
 
 1. Open your AI IDE in any relevant repo.
-2. Copy the prompt from [`PROMPT.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/PROMPT.md).
+2. Copy the prompt from [`PROMPT.md`](PROMPT.md).
 3. Paste it into Codex, Claude Code, or Cursor.
 4. Point the AI at the repos and systems you want mapped.
 5. Let it scan docs, configs, workflow files, env filenames, and env key names.
@@ -99,22 +99,22 @@ It is especially useful for:
 
 The `examples/` folder shows the shape of the generated hub:
 
-- [`examples/BOOTSTRAP.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/BOOTSTRAP.md)
-- [`examples/system-index.yaml`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/system-index.yaml)
-- [`examples/SYSTEM_MAP.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/SYSTEM_MAP.md)
-- [`examples/ENVIRONMENTS.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/ENVIRONMENTS.md)
-- [`examples/SECRETS_INDEX.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/SECRETS_INDEX.md)
-- [`examples/PROJECTS/frontend-app.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/PROJECTS/frontend-app.md)
-- [`examples/PROJECTS/crm-system.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/PROJECTS/crm-system.md)
-- [`examples/INTEGRATIONS/vercel.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/INTEGRATIONS/vercel.md)
-- [`examples/RUNBOOKS/deploy.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/RUNBOOKS/deploy.md)
-- [`examples/RUNBOOKS/local-dev.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples/RUNBOOKS/local-dev.md)
+- [`examples/BOOTSTRAP.md`](examples/BOOTSTRAP.md)
+- [`examples/system-index.yaml`](examples/system-index.yaml)
+- [`examples/SYSTEM_MAP.md`](examples/SYSTEM_MAP.md)
+- [`examples/ENVIRONMENTS.md`](examples/ENVIRONMENTS.md)
+- [`examples/SECRETS_INDEX.md`](examples/SECRETS_INDEX.md)
+- [`examples/PROJECTS/frontend-app.md`](examples/PROJECTS/frontend-app.md)
+- [`examples/PROJECTS/crm-system.md`](examples/PROJECTS/crm-system.md)
+- [`examples/INTEGRATIONS/vercel.md`](examples/INTEGRATIONS/vercel.md)
+- [`examples/RUNBOOKS/deploy.md`](examples/RUNBOOKS/deploy.md)
+- [`examples/RUNBOOKS/local-dev.md`](examples/RUNBOOKS/local-dev.md)
 
 ## Included Files
 
-- [`PROMPT.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/PROMPT.md): the main copy-paste prompt
-- [`examples/`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/examples): sample output structure
-- [`launch/linkedin-post.md`](/Users/uygarduzgun/Sites/ai-context-hub-prompt/launch/linkedin-post.md): short launch copy
+- [`PROMPT.md`](PROMPT.md): the main copy-paste prompt
+- [`examples/`](examples/): sample output structure
+- [`launch/linkedin-post.md`](launch/linkedin-post.md): short launch copy
 
 ## One-Line Pitch
 
