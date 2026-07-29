@@ -56,6 +56,7 @@ This is intentionally conservative.
 - verified facts only
 - no plaintext secrets
 - no passwords, tokens, or copied connection strings
+- secret values are never even read into context, only variable names
 - ask before patching existing AI instruction files
 - do not modify application code
 
@@ -106,6 +107,8 @@ The `examples/` folder shows the shape of the generated hub:
 - [`examples/SECRETS_INDEX.md`](examples/SECRETS_INDEX.md)
 - [`examples/PROJECTS/frontend-app.md`](examples/PROJECTS/frontend-app.md)
 - [`examples/PROJECTS/crm-system.md`](examples/PROJECTS/crm-system.md)
+- [`examples/PROJECTS/automation-worker.md`](examples/PROJECTS/automation-worker.md)
+- [`examples/PROJECTS/mail-automation.md`](examples/PROJECTS/mail-automation.md)
 - [`examples/INTEGRATIONS/vercel.md`](examples/INTEGRATIONS/vercel.md)
 - [`examples/RUNBOOKS/deploy.md`](examples/RUNBOOKS/deploy.md)
 - [`examples/RUNBOOKS/local-dev.md`](examples/RUNBOOKS/local-dev.md)

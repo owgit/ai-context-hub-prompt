@@ -33,6 +33,12 @@ Public site and user-facing application.
 - `.env.local`
 - Vercel project environment
 
+## Constraints
+
+- `crm-system` owns customer data — never write it from here
+- `main` auto-deploys to production via Vercel — never push directly to it
+- `NEXT_PUBLIC_*` values ship to the browser — never put a private key behind that prefix
+
 ## Read First Inside Repo
 
 - `README.md`

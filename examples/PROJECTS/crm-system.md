@@ -34,6 +34,12 @@ Operational source of truth for customers, internal workflows, and ticket state.
 - shell profile
 - secret manager
 
+## Constraints
+
+- this is the source of truth for customer data — no other system may write it
+- never run migrations against the production database
+- outbound mail is triggered by real ticket state — never test against production
+
 ## Read First Inside Repo
 
 - `README.md`

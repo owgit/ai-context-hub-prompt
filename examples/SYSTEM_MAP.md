@@ -26,4 +26,5 @@ flowchart LR
 - `crm-system` is the operational source of truth.
 - `automation-worker` is downstream from the CRM.
 - external services should be documented as dependency nodes, not as owned systems.
+- every node in this diagram is defined in `system-index.yaml`, either as a project or under `externals:`.
 

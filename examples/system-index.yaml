@@ -17,9 +17,9 @@ projects:
     used_by:
       - end-users
     external_dependencies:
-      - Vercel
-      - Supabase
-      - CMS
+      - vercel
+      - database
+      - cms
     key_docs:
       - README.md
       - AGENTS.md
@@ -51,7 +51,7 @@ projects:
       - automation-worker
       - mail-automation
     external_dependencies:
-      - SMTP
+      - smtp
     key_docs:
       - README.md
       - docs/integrations.md
@@ -65,3 +65,75 @@ projects:
       - Lead state -> automation trigger
       - CRM ticket -> mail automation
 
+  - id: automation-worker
+    name: Automation Worker
+    role: Downstream workflow processor for CRM state changes
+    local_path: unverified
+    local_urls:
+      - http://localhost:5001
+    prod_urls:
+      - https://automation.example.com
+    stack:
+      - unverified
+    depends_on:
+      - crm-system
+      - cms
+    used_by: []
+    external_dependencies:
+      - cms
+    key_docs:
+      - unverified
+    env_sources:
+      - unverified
+    secret_refs:
+      - unverified
+    known_flows:
+      - CRM lead state -> workflow execution
+      - Workflow output -> CMS content update
+
+  - id: mail-automation
+    name: Mail Automation
+    role: Outbound mail and outreach sequencing
+    local_path: unverified
+    local_urls:
+      - unverified
+    prod_urls:
+      - unverified
+    stack:
+      - unverified
+    depends_on:
+      - crm-system
+      - smtp
+    used_by: []
+    external_dependencies:
+      - smtp
+    key_docs:
+      - unverified
+    env_sources:
+      - unverified
+    secret_refs:
+      - unverified
+    known_flows:
+      - CRM ticket -> outbound mail
+
+externals:
+  - id: cms
+    name: Headless CMS
+    kind: third-party
+    owned: false
+  - id: database
+    name: Supabase Postgres
+    kind: third-party
+    owned: false
+  - id: smtp
+    name: SMTP Provider
+    kind: third-party
+    owned: false
+  - id: vercel
+    name: Vercel
+    kind: platform
+    owned: false
+  - id: end-users
+    name: End Users
+    kind: actor
+    owned: false
