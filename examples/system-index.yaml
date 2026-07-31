@@ -1,3 +1,6 @@
+schema_version: 1
+generated_at: 2026-07-31
+
 projects:
   - id: frontend-app
     name: Frontend App
@@ -32,6 +35,12 @@ projects:
     known_flows:
       - CMS content -> Frontend render
       - Database reads -> Frontend UI
+    sources:
+      - README.md
+      - AGENTS.md
+      - package.json
+      - vercel.json
+      - .env.local (names only)
 
   - id: crm-system
     name: CRM System
@@ -64,6 +73,11 @@ projects:
     known_flows:
       - Lead state -> automation trigger
       - CRM ticket -> mail automation
+    sources:
+      - README.md
+      - docs/integrations.md
+      - docker-compose.yml
+      - .env (names only)
 
   - id: automation-worker
     name: Automation Worker
@@ -90,6 +104,8 @@ projects:
     known_flows:
       - CRM lead state -> workflow execution
       - Workflow output -> CMS content update
+    sources:
+      - crm-system/docs/integrations.md
 
   - id: mail-automation
     name: Mail Automation
@@ -115,6 +131,8 @@ projects:
       - unverified
     known_flows:
       - CRM ticket -> outbound mail
+    sources:
+      - crm-system/docs/workflows.md
 
 externals:
   - id: cms

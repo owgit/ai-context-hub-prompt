@@ -38,6 +38,8 @@ The prompt tells the AI to generate:
 - `system-index.yaml`
 - `ENVIRONMENTS.md`
 - `SECRETS_INDEX.md`
+- `OPEN_QUESTIONS.md`
+- `REFRESH.md`
 - `PROJECTS/*.md`
 - `INTEGRATIONS/*.md`
 - `RUNBOOKS/*.md`
@@ -105,6 +107,8 @@ The `examples/` folder shows the shape of the generated hub:
 - [`examples/SYSTEM_MAP.md`](examples/SYSTEM_MAP.md)
 - [`examples/ENVIRONMENTS.md`](examples/ENVIRONMENTS.md)
 - [`examples/SECRETS_INDEX.md`](examples/SECRETS_INDEX.md)
+- [`examples/OPEN_QUESTIONS.md`](examples/OPEN_QUESTIONS.md)
+- [`examples/REFRESH.md`](examples/REFRESH.md)
 - [`examples/PROJECTS/frontend-app.md`](examples/PROJECTS/frontend-app.md)
 - [`examples/PROJECTS/crm-system.md`](examples/PROJECTS/crm-system.md)
 - [`examples/PROJECTS/automation-worker.md`](examples/PROJECTS/automation-worker.md)

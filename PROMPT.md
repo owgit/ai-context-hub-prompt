@@ -50,9 +50,15 @@ Create this structure:
 - system-index.yaml
 - ENVIRONMENTS.md
 - SECRETS_INDEX.md
+- OPEN_QUESTIONS.md
+- REFRESH.md
 - PROJECTS/*.md
 - INTEGRATIONS/*.md
 - RUNBOOKS/*.md
+
+system-index.yaml must include at the top level:
+- schema_version
+- generated_at: the date the hub was built
 
 system-index.yaml must include for each project:
 - id
@@ -69,6 +75,7 @@ system-index.yaml must include for each project:
 - env_sources
 - secret_refs
 - known_flows
+- sources: the files this entry was built from, so any fact can be re-checked
 
 system-index.yaml must also include a top-level externals list for services and actors I do not own:
 - id
@@ -102,12 +109,24 @@ SECRETS_INDEX.md must include only:
 - owner
 - short usage note if needed
 
+OPEN_QUESTIONS.md must list every unverified item as a checklist:
+- what is unknown
+- which system it belongs to
+- what would confirm it: a file, a command, or a person
+Write this to disk. Do not only report it in chat.
+
+REFRESH.md must explain how to keep the hub true:
+- read generated_at first and treat an old hub as claims, not facts
+- re-verify a fact against its sources entry before relying on it
+- re-run this prompt when systems, repos, or environments change
+- move answered items out of OPEN_QUESTIONS.md and into the hub
+
 When the hub is done:
 - validate it first: every local_path, key_doc, and env_source must exist on disk, and every depends_on / used_by id must resolve to a defined node
 - mark every miss as unverified and report it
 - show me the full folder tree
 - summarize what was verified
-- list what remained unverified
+- write everything that remained unverified to OPEN_QUESTIONS.md, then list it for me
 - generate optional bridge snippets for AGENTS.md / CLAUDE.md / Cursor memory
 - do not apply bridge snippets unless I explicitly approve it
 ```
